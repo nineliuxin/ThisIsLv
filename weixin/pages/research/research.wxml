@@ -1,0 +1,38 @@
+<!--research.wxml-->
+<swiper class="swpier" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+  <swiper-item class="banner">
+    <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+  </swiper-item>
+  </block>
+</swiper>
+<view class="loading" style="display: {{ld}};">玩命加载中....</view>
+<view class="hotview" style="display:{{hv}};">
+    <image src="../../images/che.png" class="hot"></image>
+    小旅帮你找到了这些！
+</view>
+
+<view class="contain">
+<block wx:for="{{Keygathers}}" wx:for-index="KeygatherIndex" wx:for-item="KeygatherItem" wx:key="Keygather" >
+<navigator url="/pages/gather/gather?id={{KeygatherItem.id}}" hover-class="navigator-hover">
+<view class="show__item" data-id="{{KeygatherItem.id}}" catchtap="viewgatherhotDetail">
+  <view class="gatherName" style="width:{{w}}px;height:{{h}}px" >
+    <view class="a" style="background-image:url({{KeygatherItem.images}});width:{{w}}px;height:{{h*0.6}}px;">
+    <view class="place">{{KeygatherItem.travel_city}}</view>
+    <view class="time" style="margin-top:{{h*0.15}}px;height:{{h*0.2}}">{{KeygatherItem.travel_date}}</view>
+    </view>
+
+    <view class="b">
+    <image src="{{KeygatherItem.user_img}}" class="userimg"></image>
+    <view class="info">{{KeygatherItem.user_name}}</view>
+    <view class="content">{{KeygatherItem.content}}</view>
+    <view class="FandJ">
+    <image src="../../images/focus.png" class="focus"></image>{{KeygatherItem.focus}}
+    <image src="../../images/join.png" class="join"></image>{{KeygatherItem.joiner}}    </view>
+    </view>
+  </view>
+</view>
+</navigator>
+</block>    
+</view>

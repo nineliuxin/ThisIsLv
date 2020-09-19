@@ -1,0 +1,29 @@
+/* getlocation.wxss */
+.map_container{ 
+    width: 100%; 
+   
+} 
+ 
+.map { 
+    height: 100%; 
+    width: 100%; 
+    margin-bottom: 38px;
+}
+.rgc_info{
+  font-family: '微软雅黑';
+}
+.button-hover{
+   color:white;
+   
+}
+button[type="primary"] {
+  color:white;
+  background-color:cornflowerblue;
+  height: 38px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.locationInfo{
+  font-family: '微软雅黑';
+}

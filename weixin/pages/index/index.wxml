@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<import src="../../wxSearch/wxSearch.wxml" /> 
+<view class="weui-search-bar"> 
+<view class="weui-search-bar__form"> 
+<view class="weui-search-bar__box"> 
+<icon class="weui-icon-search_in-box" type="search" size="14"></icon> 
+<input type="text" class="weui-search-bar__input" placeholder="搜索旅游地" value="{{wxSearchData.value}}" bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur" bindconfirm="SearchStrategy"/>
+<view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"> <icon type="clear" size="14"></icon> 
+</view> 
+</view> 
+</view> 
+</view> 
+<template is="wxSearch" data="{{wxSearchData}}"/>
+<swiper class="swpier" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+  <swiper-item class="banner">
+    <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+  </swiper-item>
+  </block>
+</swiper>
+
+<!--
+<view wx:for="{{strategys}}" wx:for-index="idx" wx:for-item="sitem">
+  <label>{{idx}}</label><label>{{sitem.title}}</label>
+</view>
+-->
+
+
+
+    <view class="loading" style="display: {{ld}};">玩命加载中....</view>
+    <view class="hotview" style="display:{{hv}};">
+    <image src="../../images/boluo.png" class="hot"></image>
+    小旅推荐！
+    </view>
+<block wx:for="{{strategys}}" wx:for-index="strategyIndex" wx:for-item="strategyItem" wx:key="strategy">
+  <navigator url="/pages/details/details?title={{strategyItem.title}}&id={{strategyItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{strategyItem.id}}" catchtap="viewStrategyDetail">
+    <view class="a">
+      <image src="{{strategyItem.user_img}}" class="userimg"></image>
+      <view class="info">
+      <view class="name">{{strategyItem.user_name}}</view>
+      <view class="date">{{strategyItem.date}}</view>
+      </view> 
+      <view class="title"style="float:left">
+      {{strategyItem.title}}
+      </view>
+      <view class="PandC" style="margin-right:10px;padding-top:3px;">
+      <image src="../../dist/img/点赞.png" class="dianzan"></image>{{strategyItem.dianzan}}
+      <image src="../../dist/img/收藏.png" class="shoucang"></image>{{strategyItem.shoucang}}
+      </view>
+    </view>
+    <view class="contain">
+    <view class="b" style="background-image:url({{strategyItem.cover}});width:{{imgwidth}}px;height:{{imgheight}}px;">
+    </view>
+    </view>
+    </view> 
+  </navigator>
+</block>
+ <view class="hotview" style="display:{{hv}};">
+    <image src="../../images/orange.png" class="hot"></image>
+    小旅新报！
+    </view>
+<block wx:for="{{strategyOther}}" wx:for-index="strategy_Index" wx:for-item="strategy_Item" wx:key="strategyer">
+  <navigator url="/pages/details/details?title={{strategy_Item.title}}&id={{strategy_Item.id}}" hover-class="navigator-hover">
+    <view class="show__item_new" data-id="{{strategy_Item.id}}"  catchtap="viewStrategyDetail">
+    <view class="new" style="height:{{imgheight*0.6}}px">
+    <view class="picture" style="background-image:url({{strategy_Item.cover}});height:{{imgheight*0.6}}px"></view>
+    <view class="container" style="width:{{conWidth}}px">
+    <view class="title" style="margin-top:20px;">{{strategy_Item.title}}</view>
+    <view class="content">{{strategy_Item.content}}</view>
+    <view class="PandC" style="padding-right:2px;margin-top:5px;">
+      <image src="../../dist/img/点赞.png" class="dianzan"></image>{{strategy_Item.dianzan}}
+      <image src="../../dist/img/收藏.png" class="shoucang"></image>{{strategy_Item.shoucang}}
+      </view>
+    </view>
+    </view> 
+    </view>
+  </navigator>
+</block>

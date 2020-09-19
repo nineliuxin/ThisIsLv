@@ -1,0 +1,110 @@
+<!--convene.wxml-->
+<view class="navbar"> 
+ <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+</view> 
+
+<!--我发布的--> 
+<view hidden="{{currentTab!==0}}" class="A">
+<view class="blank" style="display:{{blank}}">
+<image src="/dist/img/空.png" class="picB" mode="widthFix" style="display:{{blank}}"></image>
+</view>
+  <view class="loading" style="display: {{ld}};">玩命加载中....</view>
+  <block wx:for="{{gathers}}" wx:for-index="gatherIndex" wx:for-item="gatherItem" wx:key="gather">
+  <navigator url="../../pages/gather/gather?id={{gatherItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{gatherItem.id}}" catchtap="viewgatherDetail">
+    <view class="a">
+      <image src="{{gatherItem.user_img}}" class="userimg"></image>
+      <view class="info">
+      <view class="name">{{gatherItem.user_name}}</view>
+      <view class="time">{{gatherItem.date}}
+        <view class="FandJ">
+          <image src="../../../../images/focus.png" class="focus"></image>{{gatherItem.focus}}
+          <image src="../../../../images/join.png" class="join"></image>{{gatherItem.joiner}}
+        </view>
+      </view>
+      </view> 
+    </view>
+    <view class="new" style="height:{{h*0.6}}px">
+      <view class="img" style="background-image:url({{gatherItem.images}});width:{{w}}px;height:{{h*0.6}}px">
+        <view class="place">{{gatherItem.travel_city}}</view>
+        <view class="date" style="margin-top:{{h*0.15}}px;height:{{h*0.2}}">{{gatherItem.travel_date}}</view>
+      </view>
+      <view class="container" style="width:{{w}}px">
+        <view class="content">{{gatherItem.content}}</view>
+    </view>
+    </view> 
+    </view> 
+  </navigator>
+</block>
+ </view>
+  
+<!--我关注的--> 
+<view hidden="{{currentTab!==1}}" class="A">
+<view class="blank" style="display:{{blank}}">
+<image src="/dist/img/空.png" class="picB" mode="widthFix" style="display:{{blank}}"></image>
+</view> 
+ <view class="loading" style="display: {{ld}};">玩命加载中....</view>
+  <block wx:for="{{gatherList}}" wx:for-index="gatherListIndex" wx:for-item="gatherListItem" wx:key="gatherlist">
+  <navigator url="../../pages/gather/gather?id={{gatherListItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{gatherListItem.id}}" catchtap="viewgatherDetail">
+    <view class="a">
+      <image src="{{gatherListItem.user_img}}" class="userimg"></image>
+      <view class="info">
+      <view class="name">{{gatherListItem.user_name}}</view>
+      <view class="time">{{gatherListItem.date}}
+        <view class="FandJ">
+          <image src="../../../../images/focus.png" class="focus"></image>{{gatherListItem.focus}}
+          <image src="../../../../images/join.png" class="join"></image>{{gatherListItem.joiner}}
+        </view>
+      </view>
+      </view> 
+    </view>
+    <view class="new" style="height:{{h*0.6}}px">
+      <view class="img" style="background-image:url({{gatherListItem.images}});width:{{w}}px;height:{{h*0.6}}px">
+        <view class="place">{{gatherListItem.travel_city}}</view>
+        <view class="date" style="margin-top:{{h*0.15}}px;height:{{h*0.2}}">{{gatherListItem.travel_date}}</view>
+      </view>
+      <view class="container" style="width:{{w}}px">
+        <view class="content">{{gatherListItem.content}}</view>
+    </view>
+    </view> 
+    </view> 
+  </navigator>
+</block> 
+</view> 
+  
+<!--我报名的--> 
+<view hidden="{{currentTab!==2}}" class="A">
+<view class="blank" style="display:{{blank}}">
+<image src="/dist/img/空.png" class="picB" mode="widthFix" style="display:{{blank}}"></image>
+</view> 
+<view class="loading" style="display: {{ld}};">玩命加载中....</view>
+  <block wx:for="{{gatherMeun}}" wx:for-index="gatherMeunIndex" wx:for-item="gatherMeunItem" wx:key="gathermeun">
+  <navigator url="../../pages/gather/gather?id={{gatherMeunItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{gatherMeunItem.id}}" catchtap="viewgatherDetail">
+    <view class="a">
+      <image src="{{gatherMeunItem.user_img}}" class="userimg"></image>
+      <view class="info">
+      <view class="name">{{gatherMeunItem.user_name}}</view>
+      <view class="time">{{gatherMeunItem.date}}
+        <view class="FandJ">
+          <image src="../../../../images/focus.png" class="focus"></image>{{gatherMeunItem.focus}}
+          <image src="../../../../images/join.png" class="join"></image>{{gatherMeunItem.joiner}}
+        </view>
+      </view>
+      </view> 
+    </view>
+    <view class="new" style="height:{{h*0.6}}px">
+      <view class="img" style="background-image:url({{gatherMeunItem.images}});width:{{w}}px;height:{{h*0.6}}px">
+        <view class="place">{{gatherMeunItem.travel_city}}</view>
+        <view class="date" style="margin-top:{{h*0.15}}px;height:{{h*0.2}}">{{gatherMeunItem.travel_date}}</view>
+      </view>
+      <view class="container" style="width:{{w}}px">
+        <view class="content">{{gatherMeunItem.content}}</view>
+    </view>
+    </view> 
+    </view> 
+  </navigator>
+</block> 
+</view> 
+

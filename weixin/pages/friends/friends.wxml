@@ -1,0 +1,45 @@
+<!--friends.wxml-->
+<import src="../../wxSearch/wxSearch.wxml" /> 
+<view class="weui-search-bar"> 
+<view class="weui-search-bar__form"> 
+<view class="weui-search-bar__box"> 
+<icon class="weui-icon-search_in-box" type="search" size="14"></icon> 
+<input type="text" class="weui-search-bar__input" placeholder="搜索召集令" value="{{wxSearchData.value}}" bindfocus="wxSerchFocus" bindinput="wxSearchInput" bindblur="wxSearchBlur" bindconfirm="SearchGather"/> 
+<view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"> <icon type="clear" size="14"></icon> 
+</view> 
+</view> 
+</view> 
+</view> 
+<template is="wxSearch" data="{{wxSearchData}}"/>
+<view class="banner">
+  <image src="http://localhost:8090/MyWe/images/banner.jpg" class="bannerimg"></image>
+</view>
+
+<view class="loading" style="display:{{ld}};">玩命加载中....</view>
+<view class="hotview" style="display:{{hv}};">
+    <image src="../../images/ling.png" class="hot"></image>
+    少侠请接令！
+</view>
+<view class="contain">
+<block wx:for="{{gatherhots}}" wx:for-index="gatherhotIndex" wx:for-item="gatherhotItem" wx:key="gatherhot" >
+<navigator url="/pages/gather/gather?id={{gatherhotItem.id}}" hover-class="navigator-hover">
+<view class="show__item" data-id="{{gatherhotItem.id}}" catchtap="viewgatherhotDetail">
+  <view class="gatherName" style="width:{{w}}px;height:{{h}}px" >
+    <view class="a" style="background-image:url({{gatherhotItem.images}});width:{{w}}px;height:{{h*0.6}}px;">
+    <view class="place">{{gatherhotItem.travel_city}}</view>
+    <view class="time" style="margin-top:{{h*0.15}}px;height:{{h*0.2}}">{{gatherhotItem.travel_date}}</view>
+    </view>
+
+    <view class="b">
+    <image src="{{gatherhotItem.user_img}}" class="userimg"></image>
+    <view class="info">{{gatherhotItem.user_name}}</view>
+    <view class="content">{{gatherhotItem.content}}</view>
+    <view class="FandJ">
+    <image src="../../images/focus.png" class="focus"></image>{{gatherhotItem.focus}}
+    <image src="../../images/join.png" class="join"></image>{{gatherhotItem.joiner}}    </view>
+    </view>
+  </view>
+</view>
+</navigator>
+</block>    
+</view>

@@ -1,0 +1,9 @@
+ {
+  "navigationBarBackgroundColor": "pink",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "旅朋友",
+  "backgroundColor": "#EDEDED",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}
+

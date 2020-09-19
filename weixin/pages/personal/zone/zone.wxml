@@ -1,0 +1,61 @@
+<!--zone.wxml-->
+<view class="container" style="background-image:url({{bgsrc}})">
+  <view   class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="focus">关注：{{data.focus}}丨粉丝：{{data.fans}}</text>
+  </view>
+</view>
+<view class="playlist" >
+<block>
+      <view class="widgets__item">
+          <view  class="widgets__info">
+          <image class="next" name="gather" src="/images/add.png" bindtap="addGather"></image>
+          <navigator url="/pages/personal/zone/convene/convene" class="widget">
+            <image class="widgets__info-img music_cover" src="/images/sandwich.png" mode="aspectFill" />
+            <text class="widgets__info-name">我想召集</text> 
+            <text class="widgets__info-info">来呀~造作呀~反正有 大把时光( *︾▽︾)</text>
+          </navigator>
+          </view>
+      </view>
+</block>
+<block>
+      <view class="widgets__item">
+       
+          <view  class="widgets__info">
+            <image class="next" name="strategy" src="/images/add.png" bindtap="addStrategy"></image>
+          <navigator url="/pages/personal/zone/strategy/strategy" class="widget">
+            <image class="widgets__info-img music_cover" src="/images/drumstick.png" mode="aspectFill" />
+            <text class="widgets__info-name">我发攻略</text>
+            <text class="widgets__info-info">我有手账你有酒吗n(*≧▽≦*)n</text>
+          </navigator>
+          </view>
+        
+      </view>
+</block>
+<block>
+      <view class="widgets__item">
+        <navigator url="/pages/personal/zone/tracks/tracks" class="widget">
+          <view  class="widgets__info">
+            <image class="widgets__info-img music_cover" src="/images/circle.png" mode="aspectFill" />
+            <image class="next" src="/images/arrowright.png"></image>
+            <text class="widgets__info-name">我看足迹</text>
+            <text class="widgets__info-info">读万卷书不如行万里路~(～￣▽￣)～</text>
+          </view>
+        </navigator>
+      </view>
+</block>
+<block>
+      <view class="widgets__item">
+        <navigator url="/pages/personal/zone/collection/collection" class="widget">
+          <view  class="widgets__info">
+            <image class="widgets__info-img music_cover" src="/images/coffee.png" mode="aspectFill" />
+             <image class="next" src="/images/arrowright.png"></image>
+            <text class="widgets__info-name">我有收藏</text>
+            <text class="widgets__info-info">你好，我看上你了(　ﾟ∀ﾟ) ﾉ♡</text>
+          </view>
+        </navigator>
+      </view>
+</block>
+</view>
+

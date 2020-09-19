@@ -1,0 +1,116 @@
+/* convene.wxss */
+page{ 
+ display: flex; 
+ flex-direction: column; 
+ height: 100%; 
+ font-family: "微软雅黑"
+} 
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+} 
+.navbar .item.active{ 
+ color: #FFCC00; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #FFCC00; 
+} 
+.loading{
+  text-align: center;
+  line-height: 200px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+.A{
+  background-color: #EDEDED;
+  height: 100%;
+}
+.blank{
+  width: 100%;
+  height: 100%;
+  text-align: center
+}
+.userimg{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  float: left;
+}
+.name{
+  font-size: 30rpx;
+  margin-left: 100rpx;
+}
+.time{
+  font-size: 30rpx;
+  float: left;
+  margin-left:10rpx; 
+  width: 600rpx;
+}
+.a{
+  margin-left: 20rpx;
+  width: 100%;
+  height: 90rpx;
+}
+
+.FandJ{
+  float: right;
+  font-size: 22rpx;
+  padding-top: 8rpx;
+}
+.new{
+  margin-top: 20rpx;
+   width: 100%;
+   display:flex;
+   margin-bottom: 10px;
+ }
+.container{
+  float:left;
+  margin:auto;
+  margin-right: 10px;
+}
+.img{
+  background-size:cover;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.content{
+  float: left;
+  font-size: 30rpx;
+  display:flex;
+  align-items: center;
+}
+
+
+.focus,.join{
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.place{
+  font-size: 30rpx;
+  background-color:rgba(255,255,255,0.7);
+}
+.date{
+  font-size: 24rpx;
+  float:right;
+  background-color:rgba(255,204,204,1);
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  padding-left: 10rpx;
+  width: 300rpx;
+}

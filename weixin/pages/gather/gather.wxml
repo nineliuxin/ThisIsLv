@@ -1,0 +1,59 @@
+<!--gather.wxml-->
+<swiper class="swpier" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"
+interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+  <swiper-item class="banner">
+    <image src="{{item}}" class="slide-image" mode="aspectFill"/>
+  </swiper-item>
+  </block>
+</swiper>
+<view class="loading" style="display:{{ld}};">玩命加载中....</view>
+<view class="container">
+
+<view class="a" style="background-image:url(http://localhost:8090/MyWe/images/bbg.jpg);display:{{show}}">
+<view class="a1">
+  <view class="info">
+    <view class="title">{{gather.title}}</view>
+    <view class="user">
+    <image src="{{gather.user_img}}" class="userimg" data-id="{{gather.user_id}}" bindtap="LookUser"></image>
+    <view class="name">{{gather.user_name}}</view>
+    <view class="time">{{gather.date}}</view>
+    </view>
+  </view>
+  <view class="FandJ">
+  <view class="F">关注：{{gather.focus}}</view>
+  <view class="J">报名：{{gather.joiner}}</view>
+  </view> 
+</view>
+</view>
+
+<view class="b" style="display:{{show}}">
+    <view class="DandC">
+      <view class="date">
+        <image src="../../images/date.png" class="A"></image>出行时间：{{gather.travel_date}}
+      </view>
+      <view class="connect">
+        <image src="../../images/connect.png" class="B"></image>联系方式：{{connection}}
+      </view>
+    </view>
+    <view class="vname">
+      <view class="place">
+        <image src="../../images/place.png" class="C"></image>出行路线：{{gather.travel_city}}
+      </view>
+      <view class="sex">
+        <image src="../../images/sex.png" class="D"></image>召集性别：{{sex}}
+      </view>
+    </view>
+</view>
+
+<view class="c" style="display:{{show}}">
+  <view class="pic">
+  <image src="{{gather.images}}"class="img" mode="widthFix"></image>
+  </view>
+  <view class="content">{{gather.content}}</view>
+</view>
+<view class="d">
+  <button type="{{Vtype}}" disabled="{{x}}" loading="{{y}}" bindtap="clickButton1" data-id="{{gather.id}}" class="button1" style="width:{{w}}px;height:{{w*0.2}}px;background-color:pink;">{{text1}}</button>
+  <button type="{{Xtype}}" disabled="{{v}}" loading="{{m}}" bindtap="clickButton2" data-id="{{gather.id}}" class="button2" style="width:{{w}}px;height:{{w*0.2}}px;background-color:pink">{{text2}}</button>
+</view>
+</view>

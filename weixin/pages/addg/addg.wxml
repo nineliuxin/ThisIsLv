@@ -1,0 +1,129 @@
+<!--addg.wxml-->
+
+<form bindsubmit="saveGatherInfo">
+    <view class="form-list">
+        <view class="form-item">
+            <view class="form-item-hd">召集令标题：</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="name" value="{{name}}" placeholder="取个标题吧"/>
+            </view>
+        </view>
+        <!--<view class="form-item">
+            <view class="form-item-hd">手机号码：</view>
+            <view class="form-item-bd">
+                <input type="number" placeholder-class="input-placeholder" name="tel" value="{{tel}}" placeholder="请输入手机号码" maxlength="11"/>
+            </view>
+        </view>-->
+       
+        <view class="form-item">
+            <view class="form-item-hd">内 容：</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="content" value="{{content}}" placeholder="你想说的话"/>
+            </view>
+        </view>
+        
+        <view class="form-item">
+            <view class="form-item-hd">出发所在省：</view>
+            <view class="form-item-bd">
+                <picker bindchange="changeProvince" mode="selector" range="{{provinceName}}" value="{{provinceSelIndex}}">
+                    <view class="input {{!provinceName[provinceSelIndex] ? 'input-placeholder' : ''}}">{{provinceName[provinceSelIndex] || '请选择所在省'}}</view>
+                    <input type="text" name="province" value="{{provinceName[provinceSelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">出发所在市：</view>
+            <view class="form-item-bd">
+                <picker bindchange="changeCity" mode="selector" range="{{cityName}}" value="{{citySelIndex}}" disabled="{{!cityEnabled}}">
+                    <view class="input {{!cityName[citySelIndex] ? 'input-placeholder' : ''}}">{{cityName[citySelIndex] || '请选择所在市'}}</view>
+                    <input type="text" name="city" value="{{cityName[citySelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        <!--<view class="form-item">
+            <view class="form-item-hd">所在区：</view>
+            <view class="form-item-bd">
+                <picker bindchange="changeDistrict" mode="selector" range="{{districtName}}" value="{{districtSelIndex}}" disabled="{{! districtEnabled}}">
+                    <view class="input {{!districtName[districtSelIndex] ? 'input-placeholder' : ''}}">{{districtName[districtSelIndex] || '请选择所在区'}}</view>
+                    <input type="text" name="district" value="{{districtName[districtSelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        <view class="form-item">
+            <view class="form-item-hd">详细地址：</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="address" value="{{address}}" placeholder="请输入详细地址" maxlength="20"/>
+            </view>
+        </view>-->
+      
+         <view class="form-item">
+            <view class="form-item-hd">目的所在省：</view>
+            <view class="form-item-bd">
+                <picker bindchange="EchangeProvince" mode="selector" range="{{EprovinceName}}" value="{{EprovinceSelIndex}}">
+                    <view class="input {{!EprovinceName[EprovinceSelIndex] ? 'input-placeholder' : ''}}">{{EprovinceName[EprovinceSelIndex] || '请选择所在省'}}</view>
+                    <input type="text" name="Eprovince" value="{{EprovinceName[EprovinceSelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+        
+        <view class="form-item">
+            <view class="form-item-hd">目的所在市：</view>
+            <view class="form-item-bd">
+                <picker bindchange="EchangeCity" mode="selector" range="{{EcityName}}" value="{{EcitySelIndex}}" disabled="{{!EcityEnabled}}">
+                    <view class="input {{!EcityName[EcitySelIndex] ? 'input-placeholder' : ''}}">{{EcityName[EcitySelIndex] || '请选择所在市'}}</view>
+                    <input type="text" name="Ecity" value="{{EcityName[EcitySelIndex]}}" class="hidden"/>
+                </picker>
+            </view>
+        </view>
+    </view>
+    
+     <view class="section">
+      <view class="section__title">出发日期</view>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="SbindDateChange">
+      <view class="picker">
+      {{Sdate}}
+      </view>
+       <input type="text" name="Sdate" value="{{Sdate}}" class="hidden"/>
+      </picker>
+     </view>
+        
+     <view class="section">
+      <view class="section__title">返回日期</view>
+      <picker mode="date" value="{{date}}" start="2015-09-01" end="2020-09-01" bindchange="EbindDateChange">
+      <view class="picker">
+      {{Edate}}
+      </view>
+      <input type="text" name="Edate" value="{{Edate}}" class="hidden"/>
+      </picker>
+     </view>
+
+  <view class="section section_gap">
+   <view class="section__title">想召集的小伙伴性别</view>
+   <radio-group name="Sexradiogroup" class="radio-group" bindchange="radioChange">
+    <label><radio value="1"/>男</label>
+    <label><radio value="2"/>女</label>
+    <label><radio value="3"/>不限</label>
+   </radio-group>
+  </view>
+
+   <view class="container" >
+      <image src="{{tempFilePaths}}" mode="aspecFill" style="width:100%;height:450rpx;" bindtap="chooseimage"></image>
+   </view>
+   <input type="text" name="tempFilePaths" value="{{tempFilePaths}}" class="hidden"/>
+<view class="form-item">
+            <view class="form-item-hd">联系方式：</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="connect" value="{{connect}}" placeholder="微信号/QQ号"/>
+            </view>
+        </view>
+   <view class="form-list">
+        <view class="form-item" >
+            <view class="form-item-hd" style="width:320px;">联系方式报名后可见：</view>
+            <view class="form-item-bd">
+                <switch type="switch" name="default" color="pink" />
+            </view>
+        </view>
+    </view>
+    <button formType="submit" class="save-btn">发 布</button>
+</form>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

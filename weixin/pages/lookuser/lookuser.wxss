@@ -1,0 +1,238 @@
+/* lookuser.wxss */
+page{
+  font-family: "微软雅黑"
+}
+.navbar{ 
+ flex: none; 
+ display: flex; 
+ background: #fff; 
+} 
+.navbar .item{ 
+ position: relative; 
+ flex: auto; 
+ text-align: center; 
+ line-height: 80rpx; 
+} 
+.navbar .item.active{ 
+ color: #FFCC00; 
+} 
+.navbar .item.active:after{ 
+ content: ""; 
+ display: block; 
+ position: absolute; 
+ bottom: 0; 
+ left: 0; 
+ right: 0; 
+ height: 4rpx; 
+ background: #FFCC00; 
+} 
+.loading{
+  text-align: center;
+  line-height: 200px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+
+.a{
+  background-size:cover;
+  width: 100%;
+  height:450rpx;
+}
+
+.a1{
+  background-color: rgba(255,255,255,0.6);
+  width: 100%;
+  height:450rpx;
+}
+.info{
+  float: left;
+}
+
+.userimg{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-top: 70rpx;
+  margin-left: 50rpx
+}
+.name{
+  font-size: 50rpx;
+  margin-left: 50rpx;
+}
+
+.x{
+  float: left;
+  margin-left: 50rpx;
+  text-align: center
+}
+.y{
+  float: left;
+  text-align: center
+}
+.split{
+  float: left;
+  margin-top: 20rpx;
+  color: rgba(255,255,255,0.8);
+}
+.a0{
+  float: right;
+  background-color:rgba(237,237,237,0.4);
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  width: 300rpx;
+  text-align: center;
+  margin-top: 70rpx;
+}
+.clickme{
+  background-color:rgba(255,255,255,0.1);
+  width: 300rpx; 
+}
+
+.a2{
+  margin-top:100rpx;
+  margin-right: 30rpx;
+  float: right;
+  height: 60rpx;
+  font-size: 40rpx;
+}
+
+.show__item{
+  margin:0 0 2px 0;
+}
+
+.abc{
+  width: 100%;
+  height:70px;
+  display:block;
+  background:rgba(255,255,255,1);
+  overflow:hidden;
+  margin-top: 0px;
+}
+
+.userimgShow{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-top: 5px;
+  float: left;
+  margin-left: 10px;
+}
+.infomation{
+  padding-left: 6px;
+  font-family: "微软雅黑";
+  margin-left:46px;
+}
+.nameinfo{
+  margin-top: 5px;
+  font-size: 14px;
+}
+.date{
+  font-size: 10px;
+}
+.title{
+  font-size: 15px;
+  height: 15px;
+  margin-left:10px; 
+  font-weight: bold;
+}
+
+.picture{
+  width: 30%;
+  background-size:cover;
+  float:left;
+  margin-left: 10px;
+  border-radius: 5%;
+}
+
+.contain{
+  width: 100%;
+  background-color: white;
+}
+
+.bcd{
+  margin-left: 10px;
+  margin-right: 10px;
+  background-size:cover;
+  border-radius: 5%;
+}
+
+.dianzan,.shoucang{
+  height: 10px;
+  width: 10px;
+}
+ .PandC{
+   font-size: 12px;
+   float: right;
+ }
+
+
+ .userimgG{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  float: left;
+}
+.nameG{
+  font-size: 30rpx;
+  margin-left: 100rpx;
+}
+.timeG{
+  font-size: 30rpx;
+  float: left;
+  margin-left:10rpx; 
+  width: 600rpx;
+}
+.aaa{
+  margin-left: 20rpx;
+  width: 100%;
+  height: 90rpx;
+}
+
+.FandJ{
+  float: right;
+  font-size: 22rpx;
+  padding-top: 8rpx;
+}
+.new{
+  margin-top: 20rpx;
+   width: 100%;
+   display:flex;
+   margin-bottom: 10px;
+ }
+.containerG{
+  float:left;
+  margin:auto;
+  margin-right: 10px;
+}
+.img{
+  background-size:cover;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.contentG{
+  float: left;
+  font-size: 30rpx;
+  display:flex;
+  align-items: center;
+}
+
+
+.focusG,.joinG{
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.placeG{
+  font-size: 30rpx;
+  background-color:rgba(255,255,255,0.7);
+}
+.dateG{
+  font-size: 24rpx;
+  float:right;
+  background-color:rgba(255,204,204,1);
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  padding-left: 10rpx;
+  width: 300rpx;
+}

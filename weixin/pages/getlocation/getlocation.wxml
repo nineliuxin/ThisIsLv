@@ -1,0 +1,21 @@
+<!--getlocation.wxml-->
+<view class="map_container" style="height:{{view.Height}}px;"> 
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+</view> 
+<view class="classname">
+<font size="3"><button bindtap="actionSheetTap" hover-class="button-hover" type="primary" >查看当前位置信息</button></font>
+</view>
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <block >
+       <text class="locationInfo">{{rgcData.address}}</text> 
+       <text class="locationInfo">{{rgcData.desc}}</text> 
+       <text class="locationInfo">{{rgcData.business}}</text> 
+    </block>
+     <action-sheet-cancel class="commit" bindtap="commitLocation" data-address="{{rgcData.address}}">使用当前位置</action-sheet-cancel>
+    <action-sheet-cancel class="cancel">取消</action-sheet-cancel>
+</action-sheet>
+<view class="rgc_info"> 
+  <text>{{rgcData.address}}</text> 
+  <text>{{rgcData.desc}}</text> 
+  <text>{{rgcData.business}}</text> 
+</view>

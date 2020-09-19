@@ -1,0 +1,74 @@
+/* tracks.wxss */
+page{
+  height: 100%;
+  width: 100%;
+}
+.loading{
+  text-align: center;
+  line-height: 800rpx;
+  font-family: "微软雅黑";
+  font-size: 14px;
+  height: 100%
+}
+.top{
+  height: 45%;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-size: 100% 120%;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.intro-count{
+  border-bottom:2rpx solid white;
+  border-top: 2rpx solid white;
+  font-family: '微软雅黑';
+  font-size: 15px;
+  margin-bottom: 8px;
+ /* color:white;*/
+}
+.counts{
+  font-size: 20px;
+}
+.containers{
+  font-family: '微软雅黑';
+  margin:0 12% 0 12%;
+}
+.showPlace{
+  text-align:right;
+  font-size: 18px;
+  font-style:oblique;
+}
+.place{
+  float: right;
+}
+.show_items{
+  font-size: 15px;
+  margin-bottom: 90rpx;
+}
+.showRanking{
+  height: 30%;
+}
+.text-title{
+  border-bottom:1rpx solid gray;
+}
+.level_image{
+ width:100%;
+ height: 80px;
+ float:left;
+ margin-left: 100%;
+}
+.scroll-view-item{
+ width: 100px; 
+ height: 100px; 
+ display:inline-block;
+}
+.playList{
+  background-size: 100% 80%;
+  background-repeat:repeat-y;
+}

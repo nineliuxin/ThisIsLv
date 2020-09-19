@@ -1,0 +1,94 @@
+/* friends.wxss */
+.banner{
+  width:100%
+}
+.bannerimg{
+  width: 100%;
+  height:400rpx
+}
+.loading{
+  text-align: center;
+  line-height: 200px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+
+.hot{
+  width: 24px;
+  height: 26px;
+  float: left;
+}
+.hotview{
+  font-family: "微软雅黑";
+  font-size: 14px;
+  background-color: rgba(192, 192, 192,0.2);
+  width:115px;
+  border-radius: 8%;
+  margin:0 0 4px 4px;
+  
+}
+
+page{
+  height: 100%;
+  background-color:rgba(255,255,255,1);
+  font-family: "微软雅黑"
+}
+
+.show__item{
+  float:left;
+}
+
+.a{
+  background-size:cover;
+}
+.place{
+  font-size: 30rpx;
+  background-color:rgba(255,255,255,0.7);
+}
+.time{
+  font-size: 24rpx;
+  float:right;
+  background-color:rgba(255,204,204,1);
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  padding-left: 10rpx;
+  width: 300rpx;
+}
+.userimg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: -48rpx;
+  position: absolute;
+  margin-left: 10px;
+}
+.info{
+  margin-top:15px;
+  margin-left: 10px;
+  font-size: 30rpx;
+  float:left;
+}
+.contain{
+  padding:0 5px 5px 5px;
+}
+.gatherName{
+  margin:5px 5px 5px 5px;
+}
+
+.content{
+  float:left;
+  font-size: 30rpx;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.focus,.join{
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.FandJ{
+  float:right;
+  font-size: 20rpx;
+  margin-right: 5px;
+  margin-bottom: 0px;
+}

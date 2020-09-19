@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/index",
+    "pages/friends/friends",
+    "pages/login/login",
+    "pages/details/details",
+    "pages/search/search",
+    "pages/adds/adds",
+    "pages/addg/addg",
+    "pages/getlocation/getlocation",
+    "pages/personal/zone/zone",
+    "pages/personal/zone/convene/convene",
+    "pages/personal/zone/tracks/tracks",
+    "pages/personal/zone/strategy/strategy",
+    "pages/personal/zone/collection/collection",
+    "pages/personal/zone/convene/convenedetail/convenedetail",
+    "pages/gather/gather",
+    "pages/lookuser/lookuser",
+    "pages/research/research"
+  ],
+  "window": {
+    "navigationBarTitleText": "小旅是也",
+    "navigationBarBackgroundColor": "pink",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "white",
+    "selectedColor": "black",
+    "backgroundColor": "pink",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/房子.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/friends/friends",
+        "iconPath": "images/消息.png",
+        "text": "旅朋友"
+      },
+      {
+        "pagePath": "pages/personal/zone/zone",
+        "iconPath": "images/个人中心.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

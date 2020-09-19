@@ -1,0 +1,53 @@
+<!--adds.wxml-->
+<form bindsubmit="saveStrategyInfo">
+    <view class="form-list">
+        <view class="form-item">
+            <view class="form-item-hd">标 题：</view>
+            <view class="form-item-bd">
+                <input type="text" placeholder-class="input-placeholder" name="name" value="{{name}}" placeholder="取个标题吧"/>
+            </view>
+        </view>
+
+   <view class="form-item">
+            <view class="form-item-hd">内 容：</view>
+            <view class="form-item-bd">
+            <textarea name="text" class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+            </view>
+        </view>
+
+  <view class="weui">
+    <view class="weui-uploader">
+    <view class="weui-uploader__files">
+    <block wx:for="{{imageList}}" wx:for-item="image" wx:for-index="idx" wx:key="ind">
+    <view class="weui-uploader__file">
+    <view class="b1" hidden="{{flag}}" data-id="{{idx}}" data-src="{{image}}" bindtap="previewimg">
+    <image src="../../images/delete.png" class="delete" bindtap="deleteimg" data-id="{{idx}}"></image>
+    </view>
+    <image class="weui-uploader__img" src="{{image}}" data-id="{{idx}}" data-src="{{image}}" bindtap="previewImage" bindtouchstart="bindTouchStart" bindtouchend="bindTouchEnd"></image>
+    </view>
+    </block>
+    </view>
+    <view class="weui-uploader__input-box">
+    <view class="weui-uploader__input" bindtap="chooseImage">
+    </view>
+    </view>
+    </view>
+    </view>
+
+
+<view class="form-list">
+        <view class="form-item">
+            <view class="form-item-hd">定位分享：</view>
+            <view class="form-item-bd">
+                <switch type="switch" name="default" color="pink" checked="{{swithChecked}}" bindchange="switchChange"/>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="location">
+<image src="{{tipsrc}}" class="tip"></image>
+    {{location}}
+</view>
+<button formType="submit" class="save-btn">发 布</button>
+</form>
+<view class="message {{showMessage ? 'fade-in' : ''}}" hidden="{{!showMessage}}">{{messageContent}}</view>

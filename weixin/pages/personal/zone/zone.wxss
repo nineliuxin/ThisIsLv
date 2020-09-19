@@ -1,0 +1,90 @@
+/* zone.wxss */
+
+
+ 
+.container {
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 145rpx 0;
+  box-sizing: border-box;
+} 
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.focus,.fans{
+  font-size: 30rpx;
+  float: left;
+  flex-direction: row;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color:black;
+  font-style:normal;
+  font-weight:bold;
+}
+.area{
+  width: 100%;
+  background-color:gainsboro;
+}
+.playlist{
+   height: 80%;
+   margin-top: 0;
+   background-color:gainsboro;
+}
+.widgets__item{
+    overflow: hidden;
+    cursor: pointer; 
+    border-radius: 7%;
+    background-color:white;
+}
+.widgets__info{
+    padding:15rpx 0 0 15rpx;
+    overflow: hidden;
+    line-height: 1;
+}
+.widgets__info-img{
+    width:60rpx;
+    height:60rpx;
+    margin-right: 15rpx;
+    float:left;
+    padding-top:25rpx;
+}
+.widgets__info-name{
+  display: block;
+  height:60rpx;
+  padding-top:8rpx;
+  margin-right: 15rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 32rpx;
+  font-family:'微软雅黑';
+}
+.widgets__info-info{
+  color:dimgray;
+  font-size:25rpx;
+  display: block;
+  border-bottom:1rpx solid #eee;
+  padding-bottom: 20rpx;
+  margin-left: 10rpx;
+  font-family:'微软雅黑';
+  }
+  .next{
+     float:right;
+     width:50rpx;
+     height:50rpx;
+     margin-right: 15rpx;
+     margin-top: 20rpx
+  }

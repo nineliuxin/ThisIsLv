@@ -1,0 +1,50 @@
+<!--tracks.wxml-->
+ <view class="loading" style="display: {{ld}};">玩命加载中....</view>
+<view class="index">
+  <view class="top" style="background-image:url(../../../../../images/Vbackgournd.png);">
+    <view class="image">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="intro-count">累计到达城市:<text class="counts">{{data.cityCount}}</text>
+    </view>
+    <view class="intro-count" style="display:{{x}}">再旅行<text class="counts">{{data.num}}</text>个城市到达下一等级
+    </view>
+    <view class="intro-count" style="display:{{y}}">集齐徽章啦！有机会获得旅游大奖哟！
+    </view>
+    <!--等级 -->
+    <scroll-view scroll-x="true" scroll-into-view="{{toView}}" bindscroll="scroll" class="showRanking" style="white-space: nowrap; display:flex ">
+      <view id="firstLevel" class="scroll-view-item">
+        <image src="{{picList[0]}}" class="level_image" mode="aspectFit"></image>
+      </view>
+      <view id="secondLevel" class="scroll-view-item">
+        <image src="{{picList[1]}}" class="level_image" mode="aspectFit"></image>
+      </view>
+      <view id="thirdLevel" class="scroll-view-item">
+        <image src="{{picList[2]}}" class="level_image" mode="aspectFit"></image>
+      </view>
+      <view id="forthLevel" class="scroll-view-item">
+        <image src="{{picList[3]}}" class="level_image" mode="aspectFit"></image>
+      </view>
+      <view id="fifthLevel" class="scroll-view-item">
+        <image src="{{picList[4]}}" class="level_image" mode="aspectFit"></image>
+      </view>
+      <view id="sixthLevel" class="scroll-view-item">
+        <image src="{{picList[5]}}" class="level_image" mode="aspectFit"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="containers">
+    <view class="playList" style="background-image: url(../../../../../images/line.png);">
+      <block>
+        <view class="show_items" wx:for="{{showList}}">
+          <view class="showTime">
+            <text>{{item.date}}</text>
+             <text class="place">{{item.place}}</text>
+          </view>
+          
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>

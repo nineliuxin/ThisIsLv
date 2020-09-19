@@ -1,0 +1,29 @@
+<!--collection.wxml-->
+<view class="blank" style="display:{{blank}}">
+<image src="/dist/img/空.png" class="picB" mode="widthFix" style="display:{{blank}}"></image>
+</view>
+<view class="loading" style="display: {{ld}};">玩命加载中....</view>
+<block wx:for="{{strategys}}" wx:for-index="strategyIndex" wx:for-item="strategyItem" wx:key="strategy">
+  <navigator url="/pages/details/details?title={{strategyItem.title}}&id={{strategyItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{strategyItem.id}}" catchtap="viewStrategyDetail">
+    <view class="a">
+      <image src="{{strategyItem.user_img}}" class="userimg"></image>
+      <view class="info">
+      <view class="name">{{strategyItem.user_name}}</view>
+      <view class="date">{{strategyItem.date}}</view>
+      </view> 
+      <view class="title"style="float:left">
+      {{strategyItem.title}}
+      </view>
+      <view class="PandC" style="margin-right:10px;padding-top:3px;">
+      <image src="../../../../dist/img/点赞.png" class="dianzan"></image>{{strategyItem.dianzan}}
+      <image src="../../../../dist/img/收藏.png" class="shoucang"></image>{{strategyItem.shoucang}}
+      </view>
+    </view>
+    <view class="contain">
+    <view class="b" style="background-image:url({{strategyItem.cover}});width:{{imgwidth}}px;height:{{imgheight}}px;">
+    </view>
+    </view>
+    </view> 
+  </navigator>
+</block>

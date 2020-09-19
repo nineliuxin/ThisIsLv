@@ -1,0 +1,79 @@
+.swpier{
+  height:400rpx;
+  width: 100%
+}
+
+.swpier image{
+  height:400rpx;
+  width: 100%;
+
+}
+.loading{
+  text-align: center;
+  line-height: 200px;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+.hot{
+  width: 24px;
+  height: 26px;
+  float: left;
+}
+
+.hotview{
+  font-family: "微软雅黑";
+  font-size: 14px;
+  background-color: rgba(192, 192, 192,0.2);
+  width:170px;
+  border-radius: 8%;
+  margin: 5px;
+  margin-top: 4px;
+  
+}
+page{
+  height: 100%;
+  background-color:rgba(255,255,255,1);
+  font-family: "微软雅黑"
+}
+.title{
+  font-size: 15px;
+  height: 15px;
+  margin-left:10px; 
+  font-weight: bold;
+}
+
+ .new{
+   width: 100%;
+   background-color: white;
+   display:flex;
+   margin-bottom: 10px;
+ }
+
+.container{
+  float:left;
+  margin:auto;
+  margin-right: 10px;
+}
+
+.content{
+  margin-left: 10px;
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.picture{
+  width: 30%;
+  background-size:cover;
+  float:left;
+  margin-left: 10px;
+  border-radius: 5%;
+}
+.PandC{
+   font-size: 12px;
+   float: right;
+ }
+
+ .dianzan,.shoucang{
+  height: 10px;
+  width: 10px;
+}

@@ -1,0 +1,96 @@
+<!--lookuser.wxml-->
+<view class="loading" style="display:{{ld}};">玩命加载中....</view>
+<view class="container">
+
+<view class="a" style="background-image:url(http://localhost:8090/MyWe/images/abc.jpg);display:{{show}}">
+<view class="a0">
+  <view class="places">已走过{{data.placeCount}}个城市</view>
+  <view class="Scount">已发布{{data.Scount}}个游记</view>
+</view>
+<view class="a1">
+  <view class="info">
+    <view class="user">
+     <image src="{{data.user_img}}" class="userimg"></image>
+     <view class="name">{{data.user_name}}</view>
+     <view class="name">{{data.level}}</view>
+    </view>
+    <view class="FandF">
+      <view class="x">
+        <view class="focus">{{focus}}</view>
+        <view class="text">关注</view>
+      </view>
+      <view class="split">丨</view>
+       <view class="y">
+        <view class="fans">{{fans}}</view>
+        <view class="text">粉丝</view>
+      </view>
+    </view>
+  </view>
+<view class="a2">
+  <button type="defaule" class="clickme" bindtap="clickme">{{text}}</button>
+</view>
+</view>
+</view>
+
+<view class="b">
+  <view class="navbar"> 
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text> 
+  </view>
+  <view hidden="{{currentTab!==0}}" class="A">
+    <block wx:for="{{strategys}}" wx:for-index="strategyIndex" wx:for-item="strategyItem" wx:key="strategy">
+  <navigator url="/pages/details/details?title={{strategyItem.title}}&id={{strategyItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{strategyItem.id}}" catchtap="viewStrategyDetail">
+    <view class="abc">
+      <image src="{{strategyItem.user_img}}" class="userimgShow"></image>
+      <view class="infomation">
+      <view class="nameinfo">{{strategyItem.user_name}}</view>
+      <view class="date">{{strategyItem.date}}</view>
+      </view> 
+      <view class="title"style="float:left">
+      {{strategyItem.title}}
+      </view>
+      <view class="PandC" style="margin-right:10px;padding-top:3px;">
+      <image src="../../../../dist/img/点赞.png" class="dianzan"></image>{{strategyItem.dianzan}}
+      <image src="../../../../dist/img/收藏.png" class="shoucang"></image>{{strategyItem.shoucang}}
+      </view>
+    </view>
+    <view class="contain">
+    <view class="bcd" style="background-image:url({{strategyItem.cover}});width:{{imgwidth}}px;height:{{imgheight}}px;">
+    </view>
+    </view>
+    </view> 
+  </navigator>
+</block>
+  </view>
+  <view hidden="{{currentTab!==1}}" class="A"> 
+  <view class="loading" style="display: {{ld}};">玩命加载中....</view>
+  <block wx:for="{{gatherList}}" wx:for-index="gatherListIndex" wx:for-item="gatherListItem" wx:key="gatherlist">
+  <navigator url="../../pages/gather/gather?id={{gatherListItem.id}}" hover-class="navigator-hover">
+    <view class="show__item" data-id="{{gatherListItem.id}}" catchtap="viewgatherDetail">
+    <view class="aaa">
+      <image src="{{gatherListItem.user_img}}" class="userimgG"></image>
+      <view class="infoG">
+      <view class="nameG">{{gatherListItem.user_name}}</view>
+      <view class="timeG">{{gatherListItem.date}}
+        <view class="FandJ">
+          <image src="../../../../images/focus.png" class="focusG"></image>{{gatherListItem.focus}}
+          <image src="../../../../images/join.png" class="joinG"></image>{{gatherListItem.joiner}}
+        </view>
+      </view>
+      </view> 
+    </view>
+    <view class="new" style="height:{{h*0.6}}px">
+      <view class="img" style="background-image:url({{gatherListItem.images}});width:{{w}}px;height:{{h*0.6}}px">
+        <view class="placeG">{{gatherListItem.travel_city}}</view>
+        <view class="dateG" style="margin-top:{{h*0.15}}px;height:{{h*0.2}}">{{gatherListItem.travel_date}}</view>
+      </view>
+      <view class="containerG" style="width:{{w}}px">
+        <view class="content">{{gatherListItem.content}}</view>
+    </view>
+    </view> 
+    </view> 
+  </navigator>
+</block> 
+  </view>
+</view>
+</view>

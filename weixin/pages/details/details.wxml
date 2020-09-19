@@ -1,0 +1,40 @@
+<!--details.wxml-->
+<view class="banner">
+  <image src="http://localhost:8090/MyWe/images/detailsbanner.jpg" class="bannerimg"></image>
+</view>
+<view class="loading" style="display: {{ld}};">玩命加载中....</view>
+<view class="detail">
+  <view class="show__item">
+    <view class="a">
+      <image src="{{strategyDetail.user_img}}" class="userimg" data-id="{{strategyDetail.user_id}}" bindtap="LookUser"></image>
+      <view class="info">
+        <view class="name">{{strategyDetail.user_name}}</view>
+        <view class="date">{{strategyDetail.date}}</view>
+      </view>
+      <view class="title">
+        {{strategyDetail.title}}
+      </view>
+    </view>
+    <view class="location">
+      <image class="locate" src="../../images/locate.png" style="display:{{lc}}"></image>
+      {{strategyDetail.place}}
+    </view>
+   
+  </view>
+<view class="item">
+ <image src="{{src1}}" class="dianzan"  bindtap="praise" data-id="{{strategyDetail.id}}"></image>
+    {{strategyDetail.dianzan}}
+    <image src="{{src2}}" class="shoucang" bindtap="collect" data-id="{{strategyDetail.id}}"></image>
+    {{strategyDetail.shoucang}}
+</view> 
+ <view class="content">
+      <text class="text">{{strategyDetail.content}}</text>
+</view>
+  <view class="contain">
+    <block wx:for="{{imagelist}}" wx:for-index="imageIndex" wx:for-item="imageItem" wx:key="image">
+      <view class="b" style="background-image:url({{imageItem.image}});width:{{imgwidth}}px;height:{{imgheight}}px;" bindtap="previewImage" data-id="{{imageIndex}}" data-src="{{imageItem.image}}">
+      </view>
+    </block>
+  </view>
+
+</view>
